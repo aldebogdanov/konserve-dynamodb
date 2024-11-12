@@ -6,10 +6,10 @@
 
         ;; Inspired by https://github.com/FieryCod/holy-lambda/blob/master/examples/bb/native/aws-interop-v2.example/deps.edn
         ;; must use this client instead of default/apache for graal native:executable compat
-        software.amazon.awssdk/url-connection-client   {:mvn/version "2.29.3"}
+        software.amazon.awssdk/url-connection-client   {:mvn/version "2.29.9"}
         ;; important: excluding unused http clients below fixes graal native:executable breaking on
         ;; Random/SecureRandom due to DnsClient static init
-        software.amazon.awssdk/dynamodb                {:mvn/version "2.29.3"
+        software.amazon.awssdk/dynamodb                {:mvn/version "2.29.9"
                                                         :exclusions  [software.amazon.awssdk/netty-nio-client
                                                                       software.amazon.awssdk/apache-client]}
         com.amazonaws/aws-xray-recorder-sdk-aws-sdk-v2 {:mvn/version "2.14.0"}}
